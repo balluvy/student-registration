@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    {% extends "layout.html" %}
+    {% block content %}
+    <h2>Welcome Account: {{ message }}</h2>
+
+        <!--<button class="btn btn-primary" type="submit">send opinion</button>-->
+        <p><input class="btn btn-primary btn-large" value="Begin Study &raquo;"> </a></p>
+        <p><a href="{{ url_for('home') }}" class="btn btn-primary btn-info">Log out &raquo;</a></p>
+    {% endblock %}
+
+</body>
+</html>

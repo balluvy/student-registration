@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        input[type=text] {
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type=password] {
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    {% extends "layout.html" %}
+    {% block content %}
+    <h2>{{ title }}.</h2>
+    <br>
+    <form action="" method="POST">
+        Username: <input type="text" name="username" >
+        Faculty : <input type="text" name="fac">
+        Phone   : <input type="text" name="phone">
+        password: <input type="password" name="pass">
+ 
+        <p><input type=submit onclick="test()"  class="btn btn-primary btn-large" value='Save' ></p>
+        <h4>{{ message }}</h4>
+    </form>
+    <script>
+        function test() {
+            alert("To be successfully created, Please press 'go to next page' ");
+        }
+    </script>
+    
+    <p><a href="{{ url_for('create')}}" id="myBtn" >go to next page &raquo;</a></p>
+    <br>
+    <p><a href="{{ url_for('home')}}" class="btn btn-info btn-large">&laquo;Back </a></p>
+    {% endblock %}
+
+</body>
+</html>

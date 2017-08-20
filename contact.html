@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    {% extends "layout.html" %}
+
+    {% block content %}
+
+    <h2>{{ title }}.</h2>
+    <h3>{{ message }}</h3>
+
+    <address>
+        80/73 condo the Fine<br />
+        Charoen nakorn Road, khlongsan district, 10600<br />
+        <abbr title="Phone">P:</abbr>
+        +66909092000
+    </address>
+
+    <address>
+        <strong>E-mail:</strong>   <a href="mailto:ballmegane1@gmail.com">ballmegane1@gmail.com</a><br />
+    </address>
+
+    {% endblock %}
+
+</body>
+</html>
+
