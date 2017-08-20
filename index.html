@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            background-color: powderblue;
+        }
+        input[type=text] {
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type=password] {
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+        }
+      </style>
+</head>
+<body>
+    {% extends "layout.html" %}
+    {% block content %}
+    <h2>Student Registration </h2>
+    <h3>Web Application</h3>
+    <form action="" method="POST">
+        Username: <input type="text" name="name">
+        password: <input type="password" name="passw">
+        <p><input type=submit onclick="click()" class="btn btn-primary btn-large" value='Sign in'></p>
+    </form>
+    <p><a href="{{ url_for('study') }}" >Go &raquo;</a></p>
+    <p><a href="{{ url_for('account') }}" class="btn btn-info btn-large">Create Account &raquo;</a></p>
+    <h5>{{ message }}</h5>
+    {% endblock %}
+    <script>
+        function click() {
+            alert("To be successfully created, Please press 'Sign in' ");
+        }
+    </script>
+</body>
+</html>
